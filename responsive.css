@@ -1,0 +1,1075 @@
+
+@media only screen and (min-width: 150px) and (max-width: 765px) {
+  .content_inputs {
+      width: 100%;
+      display: grid;
+      margin-left: 5%;
+  }
+  .cv_op {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .left_input {
+    text-align: center;
+    width: 90%;
+  }
+  .right_input{
+    text-align: center;
+    width: 90%;
+    margin-left: 0%;
+  }
+  .left_input input, .right_input input{
+    margin-left: 0% !important;
+  }
+  .left_input select , .right_input select{
+    font-size: 0.8em !important;
+    margin: 0.4em 0;
+  }
+  .content_items_pc .col {
+    width: 45%;
+    height: auto;
+  }
+  .content_items_pc .row {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2em;
+    text-align: center;
+  }
+  .icon_tuenti {
+    width: auto;
+    height: 84px;
+    margin: 1em;
+  }
+  .left_div {
+      text-align: left;
+      width: 100%;
+  }
+  .right_div {
+      text-align: left;
+      width: 100%;
+      margin-left: 0%;
+  }
+  .content_items_pc .title_icons {
+    font-size: 2em;
+    width: 10em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #content_end_form {
+    width: 90% !important;
+    text-align: center;
+    display: block;
+  }
+  .col .text_icons {
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col .img_w {
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+  .father-col {
+    display: inline-block;
+    /*background-color: blue;*/
+  }
+
+  .title_icons {
+    font-size: 2.3em;
+  }
+
+  .text_icons {
+    font-size: 1.5em;
+  }
+
+  .plaza_title {
+    font-size: 2.3em;
+  }
+
+  .description {
+    font-size: 1.5em;
+  }
+
+  .col1 .icons_info p {
+    font-size: 1.5em;
+    visibility: hidden;
+    position: relative;
+  }
+
+  .col1 .icons_info p:after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "¿Casaca mata carita? Está bien, pero sin pajas. Acá van los que son buenos para vender. ¿Te apuntás?";
+    text-align: center;
+  }
+
+  .col2 .icons_info p {
+    font-size: 1.5em;
+    visibility: hidden;
+    position: relative;
+  }
+
+  .col2 .icons_info p:after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: 'A este crew les decimos "Tuentialeros" son los cracks que responden y solucionan.¿Son la voz de la razón? Entonces este es tu tipo de puesto.';
+    text-align: center;
+  }
+
+  .col3 .icons_info p {
+    font-size: 1.5em;
+    visibility: hidden;
+    position: relative;
+  }
+
+  .col3 .icons_info p:after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "Si tu sueño es ser T-Rex o cualquier otro puesto descabellado; vas en esta sección.";
+    text-align: center;
+  }
+
+  .col1 {
+    margin-bottom: -1em;
+  }
+
+  .col2 {
+    margin-bottom: -1em;
+  }
+
+  .col3 {
+    margin-top: -1em;
+    margin-bottom: 2em;
+  }
+
+  .top {
+    display: inline-block;
+    background: white;
+    border-radius: 30px;
+    height: 11em;
+  }
+
+  .single-item .col {
+    /*background-color: red;*/
+    width: 50% !important;
+    display: inline;
+  }
+
+  .p1 {
+    font-size: 2em !important;
+    line-height: 100%;
+  }
+
+  .p2 {
+    font-size: 2em;
+    width: 100% !important;
+    padding: 0.1em;
+    margin-left: 10% !important;
+}
+
+  .img_top {
+    width: 110% !important;
+    margin-top: -1%;
+    margin-bottom: -3%;
+  }
+
+  .content_form .title {
+    font-size: 2em;
+  }
+
+  #modals {
+    width: auto;
+  }
+
+  #ss-form input {
+    padding-left: 1em;
+    font-size: 0.8em;
+    margin: 0.4em;
+    /*padding: 25px 20px 0px 10px !important;*/
+    /*height: 30px !important;*/
+    overflow: hidden !important;
+    font-family: "Catamaran", sans-serif;
+  }
+
+  form .button_s {
+    font-size: 2em !important;
+    width: 6em !important;
+    height: 1.8em !important;
+    padding-left: 0em !important;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 1em;
+  }
+
+  ::-moz-placeholder {
+    font-size: 1em;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 1em;
+  }
+
+  ::placeholder {
+    font-size: 1em;
+  }
+
+  .select_departamento {
+    margin: 0.1em;
+    width: 100%;
+    font-family: "Catamaran", sans-serif;
+    font-size: 0.8em !important;
+  }
+
+  .right_select {
+    width: 100% !important;
+    font-family: "Catamaran", sans-serif;
+    font-size: 0.8em !important;
+  }
+
+  #div_sub {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    margin: 0.4em;
+  }
+
+  #municipio {
+    width: 100% !important;
+    float: left;
+  }
+
+  select {
+    border: 1px solid;
+    width: 100%;
+  }
+
+  #last_grade {
+    font-size: 0.7em !important;
+  }
+
+  #div_grade {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
+  }
+
+  #grade {
+    font-size: 0.5em !important;
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    /*font-size: .8em !important;*/
+  }
+
+  #dis_text {
+    font-size: 0.7em;
+    margin: 1em;
+  }
+
+  #div_dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
+    font-family: "Catamaran", sans-serif;
+  }
+
+  #dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    margin-bottom: -5em;
+    /*font-size: .8em !important;*/
+    font-family: "Catamaran", sans-serif;
+  }
+
+  #dis_plaza {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Catamaran-extra;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    width: 70%;
+    text-align: center;
+  }
+
+  #div_job {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
+  }
+
+  #job {
+    width: 100% !important;
+    font-size: 0.8em !important;
+  }
+
+  #div_subjob {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
+  }
+
+  #subjob {
+    font-size: 0.8em !important;
+    width: 100% !important;
+    margin-bottom: -3em;
+  }
+
+  .label_cv {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .labelfile {
+    font-size: 1em;
+    border: 1px solid grey;
+  }
+}
+
+@media only screen and (min-width: 765px) and (max-width: 1100px) {
+  .p2 {
+    font-size: 4em !important;
+  }
+}
+
+@media only screen and (min-width: 725px) and (max-width: 1100px) and (orientation: landscape) {
+  .p2 {
+    font-size: 4em !important;
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1300px) and (orientation: landscape) {
+  .p2 {
+    font-size: 5em !important;
+  }
+}
+
+@media only screen and (min-width: 910px) and (max-width: 1024px) and (orientation: landscape) {
+  #modals {
+    width: auto;
+  }
+
+  #ss-form input {
+    padding-left: 1em;
+    font-size: 0.8em;
+    margin: 0.4em;
+    /*padding: 25px 20px 0px 10px !important;*/
+    /*height: 30px !important;*/
+    overflow: hidden !important;
+    font-family: "Catamaran", sans-serif;
+  }
+
+  form .button_s {
+    font-size: 2em !important;
+    width: 6em !important;
+    height: 1.8em !important;
+    padding-left: 0em !important;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 1em;
+  }
+
+  ::-moz-placeholder {
+    font-size: 1em;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 1em;
+  }
+
+  ::placeholder {
+    font-size: 1em;
+  }
+
+  .select_departamento {
+    margin: 0.1em;
+    width: 100%;
+    font-family: "Catamaran", sans-serif;
+    font-size: 0.8em !important;
+  }
+
+  .right_select {
+    width: 100% !important;
+    font-family: "Catamaran", sans-serif;
+    font-size: 0.8em !important;
+  }
+
+  #div_sub {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    margin: 0.4em;
+  }
+
+  #municipio {
+    width: 100% !important;
+    float: left;
+  }
+
+  select {
+    border: 1px solid;
+    width: 100%;
+  }
+
+  #last_grade {
+    font-size: 0.7em !important;
+  }
+
+  #div_grade {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #grade {
+    font-size: 0.5em !important;
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    /*font-size: .8em !important;*/
+  }
+
+  #dis_text {
+    font-size: 0.7em;
+    margin: 1em;
+  }
+
+  #div_dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+    font-family: "Catamaran", sans-serif;
+  }
+
+  #dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    margin-bottom: -5em;
+    /*font-size: .8em !important;*/
+    font-family: "Catamaran", sans-serif;
+  }
+
+  #dis_plaza {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Catamaran-extra;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    width: 70%;
+    text-align: center;
+  }
+
+  #div_job {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #job {
+    width: 100% !important;
+    font-size: 0.8em !important;
+  }
+
+  #div_subjob {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #subjob {
+    font-size: 0.8em !important;
+    width: 100% !important;
+    margin-bottom: -3em;
+  }
+
+  .label_cv {
+    font-size: 0.8em;
+  }
+
+  .labelfile {
+    font-size: 1em;
+    border: 1px solid grey;
+  }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 967px) and (orientation: landscape) {
+  .p2 {
+    float: left;
+    /*background-color: red;*/
+    width: 90%;
+  }
+
+  #modals {
+    width: auto;
+  }
+
+  .top {
+    display: inline-block;
+    background: white;
+    border-radius: 30px;
+    height: 20em;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .top {
+    height: 25em !important;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  #modals {
+    width: auto;
+  }
+
+  .p1 {
+    font-size: 3em !important;
+    line-height: 100%;
+  }
+
+  .p2 {
+    font-size: 5em;
+    width: 100%;
+    padding: 0.1em;
+  }
+
+  .content_form .title {
+    font-size: 2em;
+  }
+
+  form .button_s {
+    font-size: 2em !important;
+    width: 6em !important;
+    height: 1.8em !important;
+    padding-left: 0em !important;
+  }
+
+  #div_sub {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    margin: 0.4em;
+  }
+
+  #municipio {
+    width: 100% !important;
+    float: left;
+  }
+
+  select {
+    border: 1px solid;
+    width: 100%;
+  }
+
+
+  #div_grade {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #div_dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    margin-bottom: -5em;
+  }
+
+
+  #div_job {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #job {
+    font-size: 1em;
+    width: 100% !important;
+  }
+
+  .option_p {
+    margin-top: 3em;
+  }
+
+
+  #div_subjob {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #subjob {
+    font-size: 1em;
+    width: 100% !important;
+    margin-bottom: -3em;
+  }
+
+  .label_cv {
+    font-size: 1.2em;
+  }
+
+  .labelfile {
+    font-size: 1em;
+    border: 1px solid grey;
+  }
+
+  input[type="submit"] {
+    font-size: 3em;
+    height: 3em;
+  }
+}
+
+
+
+@media only screen and (min-width: 1370px) and (orientation: portrait) {
+  #modals {
+    width: auto;
+  }
+
+  .p1 {
+    font-size: 3em !important;
+    line-height: 100%;
+  }
+
+  .content_form .title {
+    font-size: 2em;
+  }
+
+  form .button_s {
+    font-size: 2em !important;
+    width: 6em !important;
+    height: 1.8em !important;
+    padding-left: 0em !important;
+  }
+
+  #ss-form input {
+    font-size: 0.8em;
+    margin: 0.4em;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 1em;
+  }
+
+  ::-moz-placeholder {
+    font-size: 1em;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 1em;
+  }
+
+  ::placeholder {
+    font-size: 1em;
+  }
+
+  .select_departamento {
+    margin: 0.1em;
+    width: 100%;
+  }
+
+  .right_select {
+    width: 100% !important;
+  }
+
+  #div_sub {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    margin: 0.4em;
+  }
+
+  #municipio {
+    width: 100% !important;
+    float: left;
+  }
+
+  select {
+    border: 1px solid;
+    width: 100%;
+  }
+
+  #last_grade {
+    font-size: 0.7em;
+  }
+
+  #div_grade {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #grade {
+    font-size: 0.5em !important;
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #dis_text {
+    font-size: 0.7em;
+    margin: 1em;
+  }
+
+  #div_dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #dis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    margin-bottom: -5em;
+  }
+
+  #dis_plaza {
+    font-size: 0.7em;
+  }
+
+  #div_job {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #job {
+    font-size: 1em;
+    width: 100% !important;
+  }
+
+  #div_subjob {
+    margin-left: auto;
+    margin-right: auto;
+    width: 73% !important;
+  }
+
+  #subjob {
+    font-size: 1em;
+    width: 100% !important;
+    margin-bottom: -3em;
+  }
+
+  .label_cv {
+    font-size: 0.8em;
+  }
+
+  .labelfile {
+    font-size: 1em;
+    border: 1px solid grey;
+  }
+
+  input[type="submit"] {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) and (max-height: 400px) and (min-height: 300px) and (orientation: landscape) {
+  .img_top {
+    width: 77%;
+    margin-top: -1%;
+    margin-bottom: -3%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .top {
+    height: 16em !important;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) and (orientation: portrait) {
+  .top {
+    display: inline-block;
+    background: white;
+    border-radius: 30px;
+    height: 16em;
+  }
+
+  .img_top {
+    width: 86%;
+    margin-top: -1%;
+    margin-bottom: -3%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1100px) and (min-height: 700px) and (max-height: 800px) {
+  .top {
+    height: 19em !important;
+  }
+
+  .img_top {
+    width: 74%;
+    margin-top: -1%;
+    margin-bottom: -3%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 880px) and (min-height: 420px) and (max-width: 520px) {
+  .top {
+    height: 20em !important;
+  }
+}
+/* new querys mobile */
+@media only screen
+and (max-width: 600px){
+
+}
+@media only screen 
+and (max-width: 1431px)
+and (min-width: 1367px){
+  .p1 {
+    font-family: Catamaran-light;
+    font-size: 4em;
+    margin-top: 9%;
+    text-align: left;
+    padding-left: 35%;
+    line-height: 0%;
+    margin-bottom: 4%;
+  }
+} 
+@media only screen
+and (min-width: 1600px){
+  .p1 {
+    font-family: Catamaran-light;
+    font-size: 6em;
+    margin-top: 9%;
+    text-align: left;
+    padding-left: 35%;
+    line-height: 0%;
+    margin-bottom: 4%;
+  }
+  .p2 {
+    font-size: 7em;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    font-family: Catamaran-bold;
+    line-height: 88%;
+    text-align: left;
+    margin-left: 35%;
+}
+}
+@media only screen
+and (max-width: 330px){
+  .content_items_pc .col {
+    width: 40%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 668px) and (max-width: 1200px) {
+  .content_inputs{
+    width: 90%;
+    display: flex;
+    margin-left: 5%;
+  }
+  .left_input{
+    text-align: left;
+    width: 49%;
+  }
+  .left_input input{
+    width: 100%;
+    display: block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: #000 !important;
+    margin-bottom: 4%;
+  }
+  .right_input{
+    text-align: right;
+    width: 49%;
+    margin-left: 2%;
+  }
+  .right_input input{
+    width: 100%;
+    display: block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: #000 !important; 
+    margin-bottom: 4%;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    opacity: 1; /* Firefox */
+  }
+  .left_input select{
+    width: 100%;
+    display: block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: #000 !important;
+    margin-bottom: 4%;
+    height: 3em;
+    padding-left: 1em;
+  }
+  .right_input select{
+    width: 100%;
+    display: block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: #000 !important; 
+    margin-bottom: 4%;
+    height: 3em;
+    padding-left: 1em;
+  }
+  .left_div{
+    text-align: left;
+    width: 49%;
+  }
+  .right_div{
+    text-align: left;
+    width: 49%;
+    margin-left: 2%;
+  }
+  #grade{
+    margin-top: 0em;
+  }
+  #dis_plaza {
+    margin-top: 26px;
+    width: 100%;
+    text-align: left;
+}
+  .cv_op{
+    display: block;
+    margin-top: 0px;
+  
+  }
+  .single_button {
+    width: 90%;
+    height: 4em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    font-size: 1em;
+}
+.option_p select {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 66%;
+  font-size: 1em;
+}
+.labelfile{
+  font-size: 1em;
+}
+.p1 {
+  margin-bottom: 10%;
+}
+.grado{
+  font-size: 1.2em;
+}
+.disposicion {
+  width: 100% !important;
+  display: block !important;
+  font-size: 1.2em !important;
+  margin-top: 0% !important;
+  text-align: center !important;
+  margin-right: 0% !important;
+  float: unset !important;
+}
+#grade {
+  margin-top: 31px;
+  margin-left: 6%;
+}
+.plaza{
+  font-size: 1.2em;
+}
+.cv {
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 1.2em !important;
+}
+.label_cv {
+  margin-top: 5%;
+  display: inline-block;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.button_s {
+  width: 20%;
+  font-size: 3em !important;
+  margin: 1em;
+  color: #691da4;
+  background-color: #f5c746;
+  border-radius: 5px;
+  border: 0;
+  padding: 7px;
+  font-family: Catamaran-extra;
+  height: 2em;
+}
+#dis{
+  width: 30%;
+  border: 1px solid grey;
+  display: block;
+  margin-left: 35%;
+}
+.content_items_pc .row {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+  text-align: center;
+}
+.col {
+  display: inline-table;
+  width: 43%;
+  margin-top: 5%;
+}
+}
+@media only screen 
+and (max-width: 370px){
+  .p1 {
+    padding-left: 15%;
+    margin-left: 5%;
+  }
+} 
+@media only screen
+and (max-width: 750px){
+  .disposicion {
+    margin-top: 10% !important;
+  }
+}

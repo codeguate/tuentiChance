@@ -1,0 +1,76 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Landing_Generica.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1931.3594 px x 1083.4454 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+Gourmet+ (RGB)
+PANTONE 213 C (CMYK)
+PANTONE 3395 C (RGB)
+R=160 G=10 B=200 (CMYK)
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Arial (OTF)
+Arial Bold (OTF)
+Catamaran Light (OTF)
+Catamaran Regular (OTF)
+Catamaran Medium (OTF)
+Catamaran Bold (OTF)
+Catamaran ExtraBold (OTF)
+Catamaran Black (OTF)
+Texta Medium (OTF)
+Texta Bold (OTF)
+Texta Heavy (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Usuarios/haka/Escritorio/Haka/Tuenti/2019/2 Febrero/WolfPack/Elementos/stock-photo-cartoon-character-sitting-on-a-bubble-talk-social-media-concept-d-illustration-1207096414.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 8789K, 1500 by 1500 pixels
+Dimensions: 901.273 by 901.273 points 
+Resolution: 119.831 by 119.831 pixels per inch
+
+
+/Usuarios/haka/Escritorio/Haka/Tuenti/2019/1 Enero/Wolfpack/Landing_package_Folder/Links/f2fc8694-f7fe-439c-bca9-6702ff21f03e.ai
+Type: PDF
+
+/Usuarios/haka/Escritorio/Haka/Tuenti/2019/2 Febrero/WolfPack/Elementos/stock-photo-cartoon-character-sitting-on-a-bubble-talk-social-media-concept-d-illustration-1207096414.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 8789K, 1500 by 1500 pixels
+Dimensions: 901.273 by 901.273 points 
+Resolution: 119.831 by 119.831 pixels per inch
+
+
+/Usuarios/haka/Escritorio/Haka/Tuenti/2019/1 Enero/Wolfpack/Landing_package_Folder/Links/f2fc8694-f7fe-439c-bca9-6702ff21f03e.ai
+Type: PDF

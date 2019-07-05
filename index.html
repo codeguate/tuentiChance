@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121210856-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-121210856-3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Podes pedir tu chip gratis con tuenti">
+  <meta name="keywords" content="chip, gratis, tuenti">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no"/>
+  <title>Quiero Chance</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://d2px9hljt8lyuz.cloudfront.net/gt/static/img/favicon.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KD4QNBJ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+
+
+  
+  <!-- Menu -->
+  <script>
+    var fileName = "";
+    var conditionBTN = "";
+
+    function getFileExtension1(filename) {
+      conditionBTN = (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] : undefined;
+      console.log(conditionBTN);
+    }
+
+    function validateEmail(email) {
+      var re =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    function validateForm() {
+      $("#send_form").attr("disabled", "true");
+
+      var allError = "";
+
+
+
+      var nombre = $("#name").val();
+      var fecha_nacimiento = $("#date_birth").val();
+      var telefono = $("#phone").val();
+      var correo = $("#mail").val();
+      var departamento = $("#departamento").val();
+      var municipio = $("#municipios").val();
+      var zona = $("#zona").val();
+      var grado = $("#grade").val();
+      var trabajo = $("#job").val();
+      var sub_trabajo = $("#subjob").val();
+      var disponibilidad = $("#dis").val();
+      var archivo = $("#file").val();
+
+      console.log(archivo);
+      console.log($(".labelfile").text());
+      if ($(".labelfile").text() == " Examinar ") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "Debe adjuntar su CV.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (nombre == "") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "El campo de Nombre es obligatorio.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (phone == "") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "El campo de Fecha de Nacimiento es obligatorio.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (departamento == "null") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "El campo de Departamento es obligatorio.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+
+      if (municipio == "null") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "El campo de Municipio es obligatorio.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (zona == "") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "El campo de Zona es obligatorio.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (disponibilidad == "null") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "Debe seleccionar una opción valida.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (sub_trabajo == "null") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "Debe seleccionar una opción valida de subplaza.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+      if (trabajo == "null") {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "Debe seleccionar una opción valida de plaza.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+
+
+      if (validateEmail(correo)) {
+        ;
+      } else {
+        $("#send_form").removeAttr("disabled", "true");
+        allError += "No es un correo valido.<br/>";
+        $("#modal_error").html(allError);
+        $('#myModal').modal('show');
+        return false; //true
+      }
+
+
+
+
+
+      if (allError == "") {
+        var formData = new FormData();
+        formData.append($('#mail').val(), $('#file')[0].files[0]);
+        $.ajax({
+          url: 'upload.php',
+          type: 'POST',
+          data: formData,
+          processData: false, // tell jQuery not to process the data
+          contentType: false, // tell jQuery not to set contentType
+          success: function (data) {
+            // console.log(data);
+            // alert(data);
+          }
+        });
+
+
+        var correo_out = correo.replace(/\./g, '_')
+        var link = "http://157.230.216.251/files/" + correo_out + '.' + conditionBTN;
+        $("#val_correo").val(link);
+
+
+        document.forms['formula'].submit();
+
+        submitted = true;
+        return true;
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+    dropDown = function (elementId) {
+      var dropdown = document.getElementById(elementId);
+      try {
+        showDropdown(dropdown);
+      } catch (e) {
+
+      }
+      return false;
+    };
+
+    showDropdown = function (element) {
+      var event;
+      event = document.createEvent('MouseEvents');
+      event.initMouseEvent('mousedown', true, true, window);
+      element.dispatchEvent(event);
+    };
+
+    $(document).ready(function () {
+
+      if ($(window).width() > 1200) {
+        $(".t-gh__wrapper").css('max-width', '1400px');
+      }
+
+      $(".slick-next").css('display', 'none');
+      $('#file').change(function () {
+        $("#labelfile").text(this.files[0].name);
+        getFileExtension1(this.files[0].name);
+      });
+
+      var length = 0;
+      $("#buttons_form_departamento").on('click', function () {
+        var $target = $("#departamento");
+        var $clone = $target.clone().removeAttr('id');
+        $clone.val($target.val()).css({
+          overflow: "auto",
+          position: 'absolute',
+          'z-index': 999,
+          left: $target.offset().left,
+          top: $target.offset().top + $target.outerHeight(),
+          width: $target.outerWidth()
+        }).attr('size', $clone.find('option').length > 10 ? 10 : $clone.find('option').length).change(
+          function () {
+            $target.val($clone.val());
+          }).on('click blur keypress', function (e) {
+          if (e.type !== "keypress" || e.which === 13)
+            $(this).remove();
+        });
+        $('body').append($clone);
+        $clone.focus();
+      });
+
+
+      $('#buttons_form_municipio').click(function () {
+        var $target = $("#municipio");
+        var $clone = $target.clone().removeAttr('id');
+        $clone.val($target.val()).css({
+          overflow: "auto",
+          position: 'absolute',
+          'z-index': 999,
+          left: $target.offset().left,
+          top: $target.offset().top + $target.outerHeight(),
+          width: $target.outerWidth()
+        }).attr('size', $clone.find('option').length > 10 ? 10 : $clone.find('option').length).change(
+          function () {
+            $target.val($clone.val());
+          }).on('click blur keypress', function (e) {
+          if (e.type !== "keypress" || e.which === 13)
+            $(this).remove();
+        });
+        $('body').append($clone);
+        $clone.focus();
+      });
+
+      $('#buttons_form_grado').click(function () {
+        var $target = $("#grade");
+        var $clone = $target.clone().removeAttr('id');
+        $clone.val($target.val()).css({
+          overflow: "auto",
+          position: 'absolute',
+          'z-index': 999,
+          left: $target.offset().left,
+          top: $target.offset().top + $target.outerHeight(),
+          width: $target.outerWidth()
+        }).attr('size', $clone.find('option').length > 10 ? 10 : $clone.find('option').length).change(
+          function () {
+            $target.val($clone.val());
+          }).on('click blur keypress', function (e) {
+          if (e.type !== "keypress" || e.which === 13)
+            $(this).remove();
+        });
+        $('body').append($clone);
+        $clone.focus();
+
+      });
+      $('#buttons_form_disposicion').click(function () {
+
+        var $target = $("#dis");
+        var $clone = $target.clone().removeAttr('id');
+        $clone.val($target.val()).css({
+          overflow: "auto",
+          position: 'absolute',
+          'z-index': 999,
+          left: $target.offset().left,
+          top: $target.offset().top + $target.outerHeight(),
+          width: $target.outerWidth()
+        }).attr('size', $clone.find('option').length > 10 ? 10 : $clone.find('option').length).change(
+          function () {
+            $target.val($clone.val());
+          }).on('click blur keypress', function (e) {
+          if (e.type !== "keypress" || e.which === 13)
+            $(this).remove();
+        });
+        $('body').append($clone);
+        $clone.focus();
+      });
+      $('#buttons_form_plaza').click(function () {
+        var $target = $("#dis");
+        var $clone = $target.clone().removeAttr('id');
+        $clone.val($target.val()).css({
+          overflow: "auto",
+          position: 'absolute',
+          'z-index': 999,
+          left: $target.offset().left,
+          top: $target.offset().top + $target.outerHeight(),
+          width: $target.outerWidth()
+        }).attr('size', $clone.find('option').length > 10 ? 10 : $clone.find('option').length).change(
+          function () {
+            $target.val($clone.val());
+          }).on('click blur keypress', function (e) {
+          if (e.type !== "keypress" || e.which === 13)
+            $(this).remove();
+        });
+        $('job').append($clone);
+        $clone.focus();
+      });
+      $('#buttons_form_subplaza').click(function () {
+        $('#subjob').focus();
+      });
+
+
+
+
+      $('#job').on('change', function () {
+        $("#subjob > option").each(function () {
+          if (this.value != "null") {
+            this.remove();
+          }
+        });
+
+
+        var cnd_id2 = $(this).children(":selected").attr("id");
+        var iterate2 = parseInt(cnd_id2);
+        var subplaza = [
+          ['Supervisor de venta directa', 'Supervisor de canales de distribución', 'Vendedor de calle',
+            'Vendedor de agencias / Servicio el cliente', 'Impulsador', 'Promotor de panel'
+          ],
+          ['Tuentialero'],
+          ['Varios']
+        ];
+
+        for (var i = 0; i < subplaza[iterate2].length; i++) {
+          var o = new Option(subplaza[iterate2][i], subplaza[iterate2][i]);
+          $("#subjob").append(o);
+        }
+      });
+
+
+
+
+
+      // MUNICIPIOS
+
+
+
+
+      $('#departamento').on('change', function () {
+        $("#municipio > option").each(function () {
+          if (this.value != "null") {
+            this.remove();
+          }
+        });
+
+
+        var cnd_id = $(this).children(":selected").attr("id");
+        var iterate = parseInt(cnd_id);
+        var municipios = [
+          ["xd"],
+          ["Cobán", "Chisec ", "Chahal", "Fray Bartolomé de las Casas", "Lanquín", "Panzós", "Tamahú",
+            "Tucurú", "Tactic", "Santa Maria Cahabón", "Senahú", "San Cristóbal Verapaz", "San Juan Chamelco",
+            "San Pedro Carchá", "Santa Cruz Verapaz", "Santa Catalina La Tinta", "Raxruhá"
+          ],
+          ["Cubulco", "Santa Cruz el Chol", "Granados", "Purulhá", "Rabinal", "Salamá", "San Miguel Chicaj",
+            "San Jerónimo"
+          ],
+          ["Chimaltenango", "San Jose Poaquil", "San Martin Jilotepeque", "San Juan Comalapa",
+            "Santa Apolonia", "Santa Cruz Balanyá", "Tecpán Guatemala", "Patzún", "Pochuta", "Patzicía",
+            "El tejar", "Parramos", "Acatenango", "Yepocapa", "San Andres Itzapa", "Zaragoza"
+          ],
+          ["Chiquimula", "Camotan", "Concepción las Minas", "Esquipulas", "Ipala", "Jocotan", "Olopa",
+            "Quetzaltepeque", "San José La Arada", "San Juan Ermita", "San Jacinto"
+          ],
+          ["Guastatoya", "Morazán", "El Jicaro", "San Agustin Acasaguastlán", "San Cristobal Acasaguastlán",
+            "San Antonio La Paz", "Sanarate", "Sansare"
+          ],
+          ["Escuintla", "Guanagazapa", "Iztapa", "La Democracia", "La Gomera", "Masagua", "Nueva Concepción",
+            "Palín", "San José", "San Vicente Pacaya", "Santa Lucia Cotzumalguapa", "Siquinalá", "Tiquisate"
+          ],
+          ["Guatemala", "Santa Catarina Pinula", "San José Pinula", "San José Del Golfo", "Palencia",
+            "Chinautla", "San Pedro Ayampuc", "Mixco", "San Pedro Sacatepéquez", "San Juan Sacatepéquez",
+            "Chuarrancho", "Villa Nueva", "Villa Canales", "Amatitlán", "Fraijanes", "San Miguel Petapa",
+            "San Raymundo"
+          ],
+          ["Aguacatán", "Chiantla", "Colotenango", "Concepción Huista", "Cuilco", "Huehuetenango",
+            "Jacaltenango", "La Democracia", "La Libertad", "Malacatancito", "Nentón", "San Antonio Huista",
+            "San Gaspar Ixchil", "San Ildefonso Ixtahuacán", "San Juan Atitán", "San Juan Ixcoy",
+            "San Mateo Ixtatán", "San Miguel Acatán", "San Pedro Necta", "San Pedro Soloma",
+            "San Rafael La Independencia", "San Rafael Petzal", "San Sebastián Coatán",
+            "San Sebastián Huehuetenango", "San Ana Huista", "San Bárbara", "Santa Cruz Barillas",
+            "Santa Eulalia", "Santiago Chimaltenango", "Tectitán", "Todos Santos Cuchumatán", "Union Cantinil"
+          ],
+          ["Puerto Barrios", "El Estor", "Livingston", "Los Amates", "Morales"],
+          ["Jalapa", "Mataquescuintla", "Monjas", "San Pedro Pinula", "San Luis Jilotepeque",
+            "San Manuel Chaparrón", "San Carlos Alzatate"
+          ],
+          ["Jutiapa", "Agua Blanca", "Asunción Mita", "Atescatempa", "Comapa", "Conguaco", "El Adelantado",
+            "El Progeso", "Jalpatagua", "Jerez", "Moyuta", "Pasaco", "Quesada", "San José Acatempa",
+            "Santa Catarina Mita", "Yupiltepeque", "Zapotitlán"
+          ],
+          ["Dolores", "Flores", "La Libertad", "Melchor de Mencos", "Poptún", "San Andres", "San Benito",
+            "San Francisco", "San José", "San Luis", "Santa Ana", "Sayaxché"
+          ],
+          ["Quetzaltenango", "Almolonga", "Cabricán", "Cajolá", "Cantel", "Coatepeque", "Colomba",
+            "Concepción Chiquirichapa", "El Palmar", "Flores Costa Cuca", "Génova", "Huitán", "La Esperanza",
+            "Olintepeque", "San Juan Ostuncalco", "Palestina Los Altos", "Salcajá", "San Carlos Sija",
+            "San Francisco La Unión", "San Martín Sacatepéquez", "San Mateo", "San Miguel Sigüilá", "Sibilia",
+            "Zunil"
+          ],
+          ["Santa Cruz del Quiché", "Canillá", "Chajul", "Chicamán", "Chiché", "Chichicastenango", "Chinique",
+            "Cunén", "Ixcán", "Joyabaj", "Nebaj", "Pachalum", "Patzité", "Sacapulas", "San Andrés Sajcabajá",
+            "San Antonio Ilotenango", "San Bartolomé Jocotenango", "San Juan Cotzal", "San Pedro Jocopilas",
+            "Uspantán", "Zacualpa"
+          ],
+          ["Retalhuleu", "Champerico", "El Asintal", "Nuevo San Carlos", "San Andrés Villa Seca",
+            "San Martín Zapotitlán", "San Felipe", "San Sebastián", "Santa Cruz Muluá"
+          ],
+          ["Antigua Guatemala", "Alotenango", "Ciudad Vieja", "Jocotenango", "Magdalena Milpas Altas",
+            "Pastores", "San Antonio Aguas Calientes", "San Bartolomé Milpas Altas", "San Lucas Sacatepéquez",
+            "San Miguel Dueñas", "San Catarina Barahona", "Santa Lucia Milpas Altas", "Santa Maria De Jesús",
+            "Santiago Sacatepéquez", "Santo Domingo Xenacoj", "Sumpango"
+          ],
+          ["San Marcos", "Ayutla", "Catarina", "Comitancillo", "Concepción Tutuapa", "El Quetzal", "El Rodeo",
+            "El Tumbador", "Esquipulas Palo Gordo", "Ixchiguán", "La Reforma", "Malacatán", "Nuevo Progreso",
+            "Ocós", "Pajapita", "Río Blanco", "San Antonio Sacatepéquez", "San Cristóbal Cucho",
+            "San José Ojetenam", "San Lorenzo", "San Miguel Ixtahuacán", "San Pablo",
+            "San Pedro Sacatépequez", "San Rafaél Pie de la Cuesta", "Sibinal", "Sipacapa", "Tacaná",
+            "Tajumulco", "Tejutla", "La Blanca"
+          ],
+          ["Cuilapa", "Casillas", "Chiquimulilla", "Guazacapán", "Nueva Santa Rosa", "Oratorio",
+            "Pueblo Nuevo Viñas", "San Juan Tecuaco", "San Rafaél Las Flores", "Santa Cruz Naranjo",
+            "Santa María Ixhuatán", "Santa Rosa de Lima", "Taxisco", "Barberena"
+          ],
+          ["Sololá", "Concepción", "Nahualá", "Panajachel (donde se encuentra el Lago de Atitlán)",
+            "San Andres Semetabaj", "San Antonio Palopó", "San José Chacayá", "San Juan La Laguna",
+            "San Lucas Tolimán", "San Marcos La Laguna", "San Pablo La Laguna", "San Pedro La Laguna",
+            "Santa Catarina Ixtahuacan", "Santa Catarina Palopó", "Santa Clara La Laguna",
+            "Santa Cruz La Laguna", "Santa Lucía Utatlán", "Santa María Visitación", "Santiago Atitlán"
+          ],
+          ["Mazatenango", "Chicacao", "Cuyotenango", "Patulul", "Pueblo Nuevo", "Río Bravo", "Samayac",
+            "San Antonio Suchitepéquez", "San Bernardino", "San José El Ídolo", "San Francisco Zapotitlán",
+            "San Gabriel", "San Juan Bautista", "San Lorenzo", "San Miguel Panán", "San Pablo Jocopilas",
+            "Santa Bárbara", "Santo Domingo Suchitepéquez", "Santo Tomas La Unión", "Zunilito",
+            "San José la Maquina"
+          ],
+          ["Totonicapán", "Momostenango", "San Andrés Xecul", "San Bartolo", "San Cristobal Totonicapán",
+            "San Francisco El Alto", "Santa Lucía la Reforma", "Santa María Chiquimula"
+          ],
+          ["Cabañas", "Estanzuela", "Gualán", "Huité", "La Unión", "Río Hondo", "San Diego", "San Jorge",
+            "Teculután", "Usumatlán", "Zacapa"
+          ]
+        ];
+
+
+
+        for (var i = 0; i < municipios[iterate].length; i++) {
+          var o = new Option(municipios[iterate][i], municipios[iterate][i]);
+          $("#municipio").append(o);
+        }
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    .modal-confirm {
+      color: #434e65;
+      width: 525px;
+    }
+
+    .modal-confirm .modal-content {
+      padding: 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .modal-confirm .modal-header {
+      background: #691CA4;
+      border-bottom: none;
+      position: relative;
+      text-align: center;
+      margin: -20px -20px 0;
+      border-radius: 5px 5px 0 0;
+      padding: 35px;
+    }
+
+    .modal-confirm h4 {
+      text-align: center;
+      font-size: 36px;
+      margin: 10px 0;
+    }
+
+    .modal-confirm .form-control,
+    .modal-confirm .btn {
+      min-height: 40px;
+      border-radius: 3px;
+    }
+
+    .modal-confirm .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #fff;
+      text-shadow: none;
+      opacity: 0.5;
+    }
+
+    .modal-confirm .close:hover {
+      opacity: 0.8;
+    }
+
+    .modal-confirm .icon-box {
+      color: #fff;
+      width: 95px;
+      height: 95px;
+      display: inline-block;
+      border-radius: 50%;
+      z-index: 9;
+      border: 5px solid #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .modal-confirm .icon-box i {
+      font-size: 58px;
+      margin: -2px 0 0 -2px;
+    }
+
+    .modal-confirm.modal-dialog {
+      margin-top: 80px;
+    }
+
+    .modal-confirm .btn {
+      color: #fff;
+      border-radius: 4px;
+      background: #eeb711;
+      text-decoration: none;
+      transition: all 0.4s;
+      line-height: normal;
+      border-radius: 30px;
+      margin-top: 10px;
+      padding: 6px 20px;
+      min-width: 150px;
+      border: none;
+    }
+
+    .modal-confirm .btn:hover,
+    .modal-confirm .btn:focus {
+      background: #eda645;
+      outline: none;
+    }
+
+    .trigger-btn {
+      display: inline-block;
+      margin: 100px auto;
+    }
+    .t-gh{
+      color: white !important;
+      background-color: #691da4 !important;
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function (win, fn) {
+      var done = false,
+        doc = win.document,
+        modern = doc.addEventListener,
+        addListener = modern ? 'addEventListener' : 'attachEvent',
+        removeListener = modern ? 'removeEventListener' : 'detachEvent',
+        pre = modern ? '' : 'on',
+
+        init = function (e) {
+          if (e.type !== 'readystatechange' || doc.readyState === 'complete') {
+            var target = e.type === 'load' ? win : doc;
+            target[removeListener](pre + e.type, init, false);
+            if (!done) {
+              fn();
+              done = true;
+            }
+          }
+        };
+
+      if (doc.readyState == 'complete') {
+        fn();
+      } else {
+        doc[addListener](pre + 'DOMContentLoaded', init, false);
+        doc[addListener](pre + 'readystatechange', init, false);
+        win[addListener](pre + 'load', init, false);
+      }
+
+    })(window, function () {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://global-header.tuenti.com/bundles/globalheader2.bda90096f6bff5ce36f5.js';
+      document.body.appendChild(script);
+    });
+    document.write(
+      "<svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\"\n     xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n    <defs>\n        <symbol id=\"icon-close\" viewBox=\"0 0 24 32\">\n            <title>close<\/title>\n            <path d=\"M23.313 24.063q0.688 0.688 0.688 1.625t-0.688 1.625-1.625 0.688-1.625-0.688l-8.063-8.063-8.125 8.063q-0.625 0.688-1.563 0.688t-1.625-0.688-0.688-1.625 0.688-1.625l8.063-8.063-8.063-8.063q-0.688-0.688-0.688-1.625t0.688-1.625 1.625-0.688 1.563 0.688l8.125 8.063 8.063-8.063q0.688-0.688 1.625-0.688t1.625 0.688 0.688 1.625-0.688 1.625l-8.125 8.063z\"><\/path>\n        <\/symbol>\n        <symbol id=\"icon-burger\" viewBox=\"0 0 34 32\">\n            <title>burger<\/title>\n            <path d=\"M0 3.2c0-1.767 1.423-3.2 3.211-3.2h27.711c1.773 0 3.211 1.42 3.211 3.2 0 1.767-1.423 3.2-3.211 3.2h-27.711c-1.774 0-3.211-1.42-3.211-3.2zM0 16c0-1.767 1.423-3.2 3.211-3.2h27.711c1.773 0 3.211 1.42 3.211 3.2 0 1.767-1.423 3.2-3.211 3.2h-27.711c-1.774 0-3.211-1.42-3.211-3.2zM0 28.8c0-1.767 1.423-3.2 3.211-3.2h27.711c1.773 0 3.211 1.42 3.211 3.2 0 1.767-1.423 3.2-3.211 3.2h-27.711c-1.774 0-3.211-1.42-3.211-3.2z\"><\/path>\n        <\/symbol>\n        <symbol id=\"icon-arrow\" viewBox=\"0 0 35 32\">\n            <title>arrow<\/title>\n            <path d=\"M2.153 0h30.937c0.756-0.004 1.453 0.427 1.812 1.122 0.427 0.72 0.392 1.638-0.088 2.32l-15.424 24.86c-0.36 0.666-1.050 1.064-1.783 1.029-0.736 0.016-1.426-0.376-1.812-1.029l-15.38-24.86c-0.232-0.357-0.374-0.769-0.412-1.198-0.020-0.402 0.095-0.798 0.324-1.122 0.362-0.699 1.065-1.131 1.827-1.122v0z\"><\/path>\n        <\/symbol>\n        <symbol id=\"icon-logo_tuenti\" viewBox=\"0 0 160 32\">\n            <title>logo_tuenti<\/title>\n            <path d=\"M22.983 18.998c-0.399 1.86-1.138 3.598-2.205 5.149-0.316 0.465-0.826 0.716-1.351 0.716-0.312 0-0.635-0.094-0.916-0.289-0.752-0.505-0.939-1.515-0.427-2.265 0.818-1.198 1.389-2.546 1.705-3.99 0.344-1.601 0.344-3.286 0-4.88-0.315-1.444-0.887-2.792-1.705-3.999-0.512-0.742-0.325-1.754 0.437-2.264 0.741-0.505 1.756-0.314 2.258 0.435 1.067 1.552 1.806 3.277 2.205 5.149 0.441 2.034 0.441 4.2 0 6.24zM14.129 12.564c-0.396 0.392-0.945 0.617-1.514 0.617-0.562 0-1.115-0.225-1.512-0.617-0.397-0.399-0.63-0.954-0.63-1.516 0-0.562 0.233-1.104 0.63-1.505 0.794-0.802 2.238-0.802 3.026 0 0.397 0.401 0.627 0.943 0.627 1.505 0 0.563-0.229 1.117-0.627 1.516zM14.176 19.297l-2.217 4.54c-0.282 0.592-0.88 0.931-1.488 0.931-0.243 0-0.492-0.062-0.727-0.163-0.823-0.401-1.166-1.398-0.762-2.21l2.208-4.553c0.406-0.827 1.399-1.168 2.217-0.76 0.828 0.399 1.171 1.387 0.769 2.214zM24.938 0.193h-18.086c-3.784 0-6.852 3.061-6.852 6.837v18.046c0 3.776 3.068 6.837 6.852 6.837h18.086c3.784 0 6.852-3.061 6.852-6.837v-18.046c0-3.776-3.068-6.837-6.852-6.837z\"><\/path>\n            <path d=\"M44.293 23.327v-11.447h6.741v-5.676h-6.741v-6.011l-6.74 0.668v22.371c0 8.776 8.605 9.587 14.724 8.061l-1.434-5.008c-3.107 0.62-6.549 0.381-6.549-2.958z\"><\/path>\n            <path d=\"M70.929 24.376c-8.605 2.624-9.562 0.525-9.562-4.388v-13.785h-6.692v15.216c0 6.915 3.204 10.494 8.748 10.494 1.148 0 3.538-0.525 9.226-2.481l0.861 1.861h4.111v-25.089h-6.692v18.173z\"><\/path>\n            <path d=\"M141.726 23.327v-11.447h6.741v-5.676h-6.741v-6.011l-6.74 0.668v22.371c0 8.776 8.605 9.587 14.724 8.061l-1.434-5.008c-3.107 0.62-6.549 0.381-6.549-2.958z\"><\/path>\n            <path d=\"M152.291 31.293h6.645v-25.089h-6.645z\"><\/path>\n            <path d=\"M122.604 5.583c-1.147 0-3.585 0.525-9.321 2.48l-0.861-1.86h-4.11v25.089h6.692v-18.173c8.701-2.671 9.704-0.525 9.704 4.388v13.785h6.692v-15.217c0-6.915-3.203-10.493-8.796-10.493z\"><\/path>\n            <path d=\"M92.966 11.546c2.773-0.144 4.78 1.097 5.784 3.577l-11.855 2.957c0.239-3.672 2.772-6.344 6.071-6.534zM93.922 26.237c-2.438-0.143-4.637-0.764-5.832-2.958l17.258-4.245c-0.192-7.346-3.872-13.403-12.095-13.403-6.836 0-12.573 5.39-12.573 13.308 0 7.536 5.067 12.974 13.433 12.974 4.016 0 6.932-0.906 8.892-1.67l-1.578-5.056c-2.294 0.81-4.972 1.144-7.505 1.049z\"><\/path>\n        <\/symbol>\n        <symbol id=\"icon-wink_tuenti_white\" viewBox=\"0 0 32 32\">\n            <title>wink_tuenti_white<\/title>\n            <path d=\"M22.983 18.806c-0.399 1.86-1.138 3.598-2.205 5.149-0.316 0.465-0.826 0.716-1.351 0.716-0.312 0-0.635-0.094-0.916-0.289-0.752-0.505-0.939-1.515-0.427-2.265 0.818-1.198 1.389-2.546 1.705-3.99 0.344-1.601 0.344-3.286 0-4.88-0.315-1.444-0.887-2.792-1.705-3.999-0.512-0.742-0.325-1.754 0.437-2.264 0.741-0.505 1.756-0.314 2.258 0.435 1.067 1.552 1.806 3.277 2.205 5.149 0.441 2.034 0.441 4.2 0 6.24zM14.129 12.371c-0.396 0.392-0.946 0.617-1.514 0.617-0.562 0-1.116-0.225-1.512-0.617-0.397-0.399-0.63-0.954-0.63-1.516 0-0.562 0.233-1.104 0.63-1.505 0.794-0.802 2.238-0.802 3.026 0 0.397 0.401 0.627 0.943 0.627 1.505 0 0.563-0.229 1.117-0.627 1.516zM14.176 19.104l-2.217 4.54c-0.282 0.592-0.88 0.931-1.488 0.931-0.243 0-0.492-0.062-0.727-0.163-0.823-0.401-1.166-1.398-0.762-2.21l2.208-4.553c0.406-0.827 1.399-1.168 2.217-0.759 0.828 0.399 1.171 1.387 0.769 2.214zM24.938 0h-18.086c-3.784 0-6.852 3.061-6.852 6.837v18.046c0 3.776 3.068 6.837 6.852 6.837h18.086c3.784 0 6.852-3.061 6.852-6.837v-18.046c0-3.776-3.068-6.837-6.852-6.837z\"><\/path>\n        <\/symbol>\n    <\/defs>\n<\/svg>\n\n<style>@font-face{font-family:t-gh--texta-medium;src:url(https:\/\/global-header.tuenti.com\/bundles\/9c7b0b2457ac99fb83d213f7bcb44336.eot);src:url(https:\/\/global-header.tuenti.com\/bundles\/9c7b0b2457ac99fb83d213f7bcb44336.eot?#iefix) format(\"embedded-opentype\"),url(https:\/\/global-header.tuenti.com\/bundles\/433b1a071669aa3b988981022c603ef7.woff2) format(\"woff2\"),url(https:\/\/global-header.tuenti.com\/bundles\/5f49ac10bbcf0c1cae5e51d97018e6d9.woff) format(\"woff\"),url(https:\/\/global-header.tuenti.com\/bundles\/e589026c6afbedc9309ba749855117e0.ttf) format(\"truetype\"),url(https:\/\/global-header.tuenti.com\/bundles\/5fa0ef9ae2193159eea1b5850e13c032.svg#texta-medium) format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:t-gh--texta-heavy;src:url(https:\/\/global-header.tuenti.com\/bundles\/f05035808760c92d885c2557ccdd62b4.eot);src:url(https:\/\/global-header.tuenti.com\/bundles\/f05035808760c92d885c2557ccdd62b4.eot?#iefix) format(\"embedded-opentype\"),url(https:\/\/global-header.tuenti.com\/bundles\/5f8744f51198260d6f06615d439eeb15.woff2) format(\"woff2\"),url(https:\/\/global-header.tuenti.com\/bundles\/2d02131a5d1d9ea681963ab43ae514a5.woff) format(\"woff\"),url(https:\/\/global-header.tuenti.com\/bundles\/9b86f604dbf35e1c726dfd5238d6df75.ttf) format(\"truetype\"),url(https:\/\/global-header.tuenti.com\/bundles\/7282321198217c1e6823e28d30ae5a37.svg#texta-heavy) format(\"svg\");font-weight:400;font-style:normal}.t-gh{box-sizing:border-box}.t-gh *,.t-gh :after,.t-gh :before{box-sizing:inherit;margin:0;padding:0}.t-gh--icon{display:inline-block;width:1em;height:1em;fill:currentColor}.t-gh--icon-burger{width:21px;height:20px}.t-gh--icon-arrow{width:10px;height:9px;transition:all .3s ease}.t-gh--icon-arrow__on{transform:rotate(180deg);-webkit-transform:rotate(180deg)}.t-gh--icon-logo_tuenti{width:90px;height:18px}.t-gh--icon-logo_wink{width:18px}.t-gh{position:relative;font:20px\/1 t-gh--texta-medium,Helvetica,Arial,Sans-serif;letter-spacing:.5px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;transition:all .3s;z-index:101}.t-gh a{font-size:20px;color:inherit;text-decoration:none}.t-gh ul{list-style:none}.t-gh__wrapper{display:table;width:100%;height:48px;margin:0 auto;padding:0 16px}@media only screen and (min-width:1200px){.t-gh__wrapper{max-width:1200px}}.t-gh__logo{display:table-cell;vertical-align:middle;width:200px;line-height:0}.t-gh__logo>a{display:inline-block}.t-gh--menu{display:none}@media only screen and (min-width:768px){.t-gh--menu{display:table-cell;vertical-align:middle;text-align:right}.t-gh--menu--item{position:relative;display:inline-block;padding:12px 2px}.t-gh--menu--item a{padding:0 8px;border-radius:4px;transition:background-color .2s}.t-gh--menu--item a:hover{background-color:rgba(0,0,0,.08)}.t-gh--menu--item a:focus{text-decoration:none;outline:5px auto -webkit-focus-ring-color}.t-gh--menu--item__selected a:hover{background-color:transparent}.t-gh--menu--item.t-gh--login{margin-left:40px}.t-gh--menu--item.t-gh--login a{border:1px solid}.t-gh--menu--item.t-gh--login a:hover{border:0;padding:1px 9px}.t-gh--menu--item.t-gh--avatar{margin-left:40px;padding:11px 2px}}@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.t-gh--menu-l2{display:none}@media only screen and (min-width:768px){.t-gh--menu-l2{position:absolute;width:100%;height:48px;background-color:rgba(25,25,25,.8);-webkit-animation:fadeIn .2s ease;animation:fadeIn .2s ease}.t-gh--menu-l2 .t-gh--menu-l2--wrapper{position:relative;margin:auto;text-align:center}@media only screen and (min-width:1200px){.t-gh--menu-l2 .t-gh--menu-l2--wrapper{max-width:1200px}}.t-gh--menu-l2--item{position:relative;display:inline-block;margin:0 14px;opacity:.8}.t-gh--menu-l2--item:hover{opacity:1}.t-gh--menu-l2--item a{display:block;padding:14px 0}.t-gh__mode_dropdown .t-gh--menu-l2__on,.t-gh__mode_first-level-selected .t-gh--menu-l2__selected{display:block}}.t-gh--menu--item:after,.t-gh--menu-l2--item a:after{content:\"\";position:absolute;display:block;height:3px;-webkit-transform:scaleX(0);transform:scaleX(0);transition:transform .1s}.t-gh--menu--item:after{right:10px;bottom:-2px;left:10px}.t-gh--menu-l2--item a:after{right:0;bottom:0;left:0}.t-gh--menu--item__selected:after,.t-gh--menu-l2--item__selected a:after{-webkit-transform:scaleX(1);transform:scaleX(1);transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s}.t-gh--menu--item .t-avatar{margin-right:8px}.t-gh--no-scroll{overflow:hidden}.t-gh--burger-menu{position:fixed;top:0;right:0;bottom:0;z-index:90000;width:100%;min-width:260px;visibility:hidden;overflow-y:auto;-webkit-transform:translate(1000px);transform:translate(1000px);transition:all .3s linear}.t-gh--burger-menu__on{display:block;visibility:visible;-webkit-transform:translate(0);transform:translate(0)}.t-gh--burger-menu-open-trigger{float:right;padding:12px 0 12px 16px}.t-gh--burger-menu-close{position:relative;text-align:right}.t-gh--burger-menu-close-trigger{display:inline-block;vertical-align:middle;padding:16px;text-align:right;line-height:0}.t-gh--burger-menu--item{position:relative;margin:0 40px 40px}.t-gh--burger-menu--item.t-gh--avatar,.t-gh--burger-menu--item.t-gh--login{margin-right:0;padding-top:40px}.t-gh--burger-menu--item.t-gh--avatar>.t-avatar,.t-gh--burger-menu--item.t-gh--avatar>a{display:table-cell;vertical-align:middle}.t-gh--burger-menu--item.t-gh--avatar>a{width:100%;padding-left:14px}.t-gh--burger-menu--item .t-avatar{margin-right:8px}.t-gh--burger-menu--item--txt{position:relative;z-index:1}.t-gh--burger-menu--item--txt a{padding-right:30px;font-family:t-gh--texta-heavy,Helvetica,Arial,Sans-serif}.t-gh--burger-menu--l2-trigger{position:absolute;right:0;width:100%;text-align:right}.t-gh--burger-menu--l2-trigger:before{content:\"\";position:absolute;top:6px;right:30px;bottom:0;left:0;display:inline-block;height:10px}.t-gh--burger-menu-l2{display:none;margin:30px 0 0 40px}.t-gh--burger-menu-l2__on{display:inherit}.t-gh--burger-menu-l2--item{position:relative;margin-bottom:30px}.t-gh--burger-menu-l2--item:last-child{margin-bottom:0}.t-gh--burger-menu-l2--item:before{content:\"\";position:absolute;top:0;bottom:0;left:-14px;display:block;width:4px;height:4px;margin:auto;border-radius:50%}@media only screen and (min-width:768px){.t-gh--burger-menu,.t-gh--burger-trigger{display:none}}.t-gh__menu-has-active-l2 .t-gh__sticky--active,.t-gh__menu-no-active-l2.t-gh__sticky--active,.t-gh__mode_dropdown.t-gh__sticky--active{position:fixed!important;top:0;right:0;left:0}.t-gh__sticky--active .t-gh--icon-logo_tuenti{display:none}.t-gh--icon-logo_tuenti,.t-gh__theme_es.t-gh__sticky--active .t-gh--icon-logo_tuenti,.t-gh__theme_es_inv.t-gh__sticky--active .t-gh--icon-logo_tuenti{position:relative;z-index:2;display:block}.t-gh--icon-logo_wink--sticky{position:absolute;top:0;bottom:0;margin:auto}.t-gh--menu-l2--isotype{display:none}.t-gh__theme_es .t-gh--menu-l2--isotype,.t-gh__theme_es_inv .t-gh--menu-l2--isotype{display:block;position:absolute;top:0;bottom:0;left:16px;padding:10px 0;line-height:1}.t-gh--icon-logo_wink--sticky,.t-gh__theme_es .t-gh--menu-l2--isotype,.t-gh__theme_es_inv .t-gh--menu-l2--isotype{opacity:0;-webkit-transform:scale(0);transform:scale(0);transition:all .6s}.t-gh__sticky--active .t-gh--icon-logo_wink--sticky,.t-gh__theme_es .t-gh__sticky--active .t-gh--menu-l2--isotype,.t-gh__theme_es_inv .t-gh__sticky--active .t-gh--menu-l2--isotype{opacity:1;-webkit-transform:scale(1);transform:scale(1)}@media only screen and (max-width:767px){.t-gh__theme_es.t-gh__sticky--active .t-gh--icon-logo_tuenti,.t-gh__theme_es_inv.t-gh__sticky--active .t-gh--icon-logo_tuenti{display:none}.t-gh__menu-has-active-l2.t-gh__sticky--active{position:fixed!important;top:0;right:0;left:0}}.t-avatar,.t-avatar a{display:inline-block}.t-gh .t-avatar>img{margin-top:-8px;vertical-align:middle}.t-gh .t-avatar--bg,.t-gh .t-avatar>img{width:24px;height:24px;border-radius:50%}.t-gh .t-avatar--bg{display:inline-block;text-align:center}.t-gh .t-avatar__letters{padding:2px;vertical-align:middle;font-size:10px;line-height:2.45;color:#fff}.t-gh .t-avatar--bg-0,.t-gh .t-avatar--bg-1,.t-gh .t-avatar--bg-2,.t-gh .t-avatar--bg-3,.t-gh .t-avatar--bg-4,.t-gh .t-avatar--bg-5,.t-gh .t-avatar--bg-7,.t-gh .t-avatar--bg-8,.t-gh .t-avatar--bg-a{background:#6fbae8}.t-gh .t-avatar--bg-6{background:#c6a88b}.t-gh .t-avatar--bg-9{background:#c4b18f}.t-gh .t-avatar--bg-b{background:#78b0dd}.t-gh .t-avatar--bg-c{background:#81a7d4}.t-gh .t-avatar--bg-d{background:#8a9dcb}.t-gh .t-avatar--bg-e{background:#9193c0}.t-gh .t-avatar--bg-f{background:#9a89b6}.t-gh .t-avatar--bg-g{background:#a37fad}.t-gh .t-avatar--bg-h{background:#ac76a3}.t-gh .t-avatar--bg-i{background:#b46c99}.t-gh .t-avatar--bg-j{background:#bd628f}.t-gh .t-avatar--bg-k{background:#c55985}.t-gh .t-avatar--bg-l{background:#ce4f7c}.t-gh .t-avatar--bg-m{background:#d84672}.t-gh .t-avatar--bg-n{background:#df3c68}.t-gh .t-avatar--bg-o{background:#e53c62}.t-gh .t-avatar--bg-p{background:#e34666}.t-gh .t-avatar--bg-q{background:#e04e69}.t-gh .t-avatar--bg-r{background:#dd576c}.t-gh .t-avatar--bg-s{background:#db6070}.t-gh .t-avatar--bg-t{background:#d86973}.t-gh .t-avatar--bg-u{background:#d67277}.t-gh .t-avatar--bg-v{background:#d37b7a}.t-gh .t-avatar--bg-w{background:#d1847e}.t-gh .t-avatar--bg-x{background:#ce8d81}.t-gh .t-avatar--bg-y{background:#cb9684}.t-gh .t-avatar--bg-z{background:#c99f88}.t-gh{color:#fff}.t-gh--menu--item__selected:after,.t-gh--menu-l2--item a:after{background-color:#fff}.t-gh--burger-menu--item.t-gh--avatar,.t-gh--burger-menu--item.t-gh--login{border-top:1px solid #fff}.t-gh--burger-menu--l2-trigger:before{background-image:linear-gradient(90deg,#fff 25%,hsla(0,0%,100%,0) 0);background-position:50%;background-size:8px 2px;background-repeat:repeat-x}.t-gh--burger-menu-l2--item:before{background-color:#fff}.t-gh,.t-gh--burger-menu,.t-gh--burger-menu--item--txt{background-color:#191919}.t-gh__theme_ec,.t-gh__theme_ec .t-gh--burger-menu,.t-gh__theme_ec .t-gh--burger-menu--item--txt{background-color:#ff0468}.t-gh__theme_pe,.t-gh__theme_pe .t-gh--burger-menu,.t-gh__theme_pe .t-gh--burger-menu--item--txt{background-color:#60c}.t-gh__theme_ar,.t-gh__theme_ar .t-gh--burger-menu,.t-gh__theme_ar .t-gh--burger-menu--item--txt{background-color:#0ad7a1}.t-gh__theme_es{color:#191919;background-color:#fff}.t-gh__theme_es .t-gh--menu-l2>ul{color:#fff}.t-gh__mode_first-level-selected .t-gh--menu-l2{background-color:rgba(25,25,25,.5)}.t-gh--menu-l2.t-gh__sticky--active,.t-gh__theme_es .t-gh--burger-menu-l2--item:before,.t-gh__theme_es .t-gh--menu--item:after,.t-gh__theme_es .t-gh--menu--item__selected:after{background-color:#191919}.t-gh__theme_es .t-gh--burger-menu--item.t-gh--avatar,.t-gh__theme_es .t-gh--burger-menu--item.t-gh--login{border-top:1px solid #191919}.t-gh__theme_es,.t-gh__theme_es .t-gh--burger-menu,.t-gh__theme_es .t-gh--burger-menu--item--txt{background-color:#fff}.t-gh__theme_es .t-gh--burger-menu--l2-trigger:before{background-image:linear-gradient(90deg,#191919 25%,rgba(25,25,25,0) 0);background-position:50%;background-size:8px 2px;background-repeat:repeat-x}.t-gh__theme_es.t-gh__menu-has-active-l2 .t-gh--icon-logo_wink--sticky{fill:#fff}@media only screen and (max-width:767px){.t-gh__theme_es.t-gh__menu-has-active-l2.t-gh__sticky--active .t-gh__logo{color:#191919}.t-gh__theme_es.t-gh__menu-has-active-l2 .t-gh--icon-logo_wink--sticky{fill:#191919}}<\/style>\n\n\n<div class=\"t-gh t-gh__theme_es t-gh__mode_dropdown t-gh__menu-no-active-l2 t-gh__sticky\">\n    <div class=\"t-gh__wrapper\">\n\n        <span class=\"t-gh__logo\">\n            <a href=\"https:\/\/www.tuenti.gt\" >\n            <svg class=\"t-gh--icon t-gh--icon-logo_tuenti\">\n                <use xlink:href=\"#icon-logo_tuenti\"><\/use>\n            <\/svg>\n             <svg class=\"t-gh--icon t-gh--icon-logo_wink t-gh--icon-logo_wink--sticky\">\n                <use xlink:href=\"#icon-wink_tuenti_white\"><\/use>\n            <\/svg>\n            <\/a>        <\/span>\n\n                    <a class=\"t-gh--burger-trigger t-gh--burger-menu-open-trigger\" href=\"javascript:void(0)\">\n                <svg class=\"t-gh--icon t-gh--icon-burger\">\n                    <use xlink:href=\"#icon-burger\"><\/use>\n                <\/svg>\n            <\/a>\n\n            <ul class=\"t-gh--menu\">\n                                    <li class=\"t-gh--menu--item t-gh--menu--item-trigger \"\n                        data-menu-id=\"t-gh--menu-l2-id__t-nav-store\">\n                        <a href=\"https:\/\/pedituchip.tuenti.gt\"  id=\"t-nav-store\" >Compra<\/a>                    <\/li>\n                                    <li class=\"t-gh--menu--item t-gh--menu--item-trigger \"\n                        data-menu-id=\"t-gh--menu-l2-id__t-nav-support\">\n                        <a href=\"https:\/\/www.tuenti.gt\/ayuda\/\"  id=\"t-nav-support\" >Soporte<\/a>                    <\/li>\n                                    <li class=\"t-gh--menu--item t-gh--menu--item-trigger \"\n                        data-menu-id=\"t-gh--menu-l2-id__t-nav-app\">\n                        <a href=\"https:\/\/www.tuenti.gt\/app\/\"  id=\"t-nav-app\" >App<\/a>                    <\/li>\n                                <li class=\"t-gh--menu--item t-gh--login\">\n                    <a href=\"https:\/\/www.tuenti.com\/login\" >Entrar<\/a>                <\/li>\n            <\/ul>\n            <\/div>\n\n                                        <div class=\"t-gh--menu-l2  \"\n                    id=\"t-gh--menu-l2-id__t-nav-store\">\n                    <ul class=\"t-gh--menu-l2--wrapper\">\n                        <li class=\"t-gh--menu-l2--isotype\">\n                            <a href=\"https:\/\/www.tuenti.gt\" >\n                            <svg class=\"t-gh--icon t-gh--icon-logo_wink\">\n                                <use xlink:href=\"#icon-wink_tuenti_white\"><\/use>\n                            <\/svg>\n                            <\/a>                        <\/li>\n                                                    <li class=\"t-gh--menu-l2--item \">\n                                <a href=\"https:\/\/pedituchip.tuenti.gt\"  id=\"t-nav-store-chip\" >Chip<\/a>                            <\/li>\n                                                    <li class=\"t-gh--menu-l2--item \">\n                                <a href=\"https:\/\/www.tuenti.gt\/combos-precios\/\"  id=\"t-nav-store-combos\" >Combos y Paquetes<\/a>                            <\/li>\n                                                    <li class=\"t-gh--menu-l2--item \">\n                                <a href=\"https:\/\/www.tuenti.gt\/recargar\/\"  id=\"t-nav-store-recargas\" >Recargas<\/a>                            <\/li>\n                                            <\/ul>\n                <\/div>\n                                                <div class=\"t-gh--menu-l2  \"\n                    id=\"t-gh--menu-l2-id__t-nav-support\">\n                    <ul class=\"t-gh--menu-l2--wrapper\">\n                        <li class=\"t-gh--menu-l2--isotype\">\n                            <a href=\"https:\/\/www.tuenti.gt\" >\n                            <svg class=\"t-gh--icon t-gh--icon-logo_wink\">\n                                <use xlink:href=\"#icon-wink_tuenti_white\"><\/use>\n                            <\/svg>\n                            <\/a>                        <\/li>\n                                                    <li class=\"t-gh--menu-l2--item \">\n                                <a href=\"https:\/\/www.tuenti.gt\/ayuda\/\"  id=\"t-nav-support-help\" >Ayuda<\/a>                            <\/li>\n                                                    <li class=\"t-gh--menu-l2--item \">\n                                <a href=\"https:\/\/www.tuenti.gt\/preguntas-frecuentes\/\"  id=\"t-nav-support-faq\" >FAQs<\/a>                            <\/li>\n                                                    <li class=\"t-gh--menu-l2--item \">\n                                <a href=\"https:\/\/www.tuenti.gt\/foro\/\"  id=\"t-nav-support-foro\" >Foro<\/a>                            <\/li>\n                                            <\/ul>\n                <\/div>\n                                        \n        <ul class=\"t-gh--burger-menu\">\n            <li class=\"t-gh--burger-menu-close\">\n                <a class=\"t-gh--burger-menu-close-trigger t-gh--burger-trigger\" href=\"javascript:void(0)\">\n                    <svg class=\"t-gh--icon t-gh--icon-close\">\n                        <use xlink:href=\"#icon-close\"><\/use>\n                    <\/svg>\n                <\/a>\n            <\/li>\n                            <li class=\"t-gh--burger-menu--item \">\n                    <span class=\"t-gh--burger-menu--item--txt\"><a href=\"https:\/\/pedituchip.tuenti.gt\"  id=\"t-nav-store\" >Compra<\/a><\/span>\n                                            <a href=\"javascript:void()\" class=\"t-gh--burger-menu--l2-trigger\"\n                        data-menu-id=\"t-gh--burguer-menu-l2-id__t-nav-store\"\n                        data-arrow-id=\"t-gh--burguer-menu-l2-arrow-id__t-nav-store\">\n                            <svg class=\"t-gh--icon t-gh--icon-arrow\"\n                                id=\"t-gh--burguer-menu-l2-arrow-id__t-nav-store\">\n                                <use xlink:href=\"#icon-arrow\"><\/use>\n                            <\/svg>\n                        <\/a>\n                        <ul class=\"t-gh--burger-menu-l2\" id=\"t-gh--burguer-menu-l2-id__t-nav-store\">\n                                                            <li class=\"t-gh--burger-menu-l2--item \">\n                                    <a href=\"https:\/\/pedituchip.tuenti.gt\"  id=\"t-nav-store-chip\" >Chip<\/a>                                <\/li>\n                                                            <li class=\"t-gh--burger-menu-l2--item \">\n                                    <a href=\"https:\/\/www.tuenti.gt\/combos-precios\/\"  id=\"t-nav-store-combos\" >Combos y Paquetes<\/a>                                <\/li>\n                                                            <li class=\"t-gh--burger-menu-l2--item \">\n                                    <a href=\"https:\/\/www.tuenti.gt\/recargar\/\"  id=\"t-nav-store-recargas\" >Recargas<\/a>                                <\/li>\n                                                    <\/ul>\n                                    <\/li>\n                            <li class=\"t-gh--burger-menu--item \">\n                    <span class=\"t-gh--burger-menu--item--txt\"><a href=\"https:\/\/www.tuenti.gt\/ayuda\/\"  id=\"t-nav-support\" >Soporte<\/a><\/span>\n                                            <a href=\"javascript:void()\" class=\"t-gh--burger-menu--l2-trigger\"\n                        data-menu-id=\"t-gh--burguer-menu-l2-id__t-nav-support\"\n                        data-arrow-id=\"t-gh--burguer-menu-l2-arrow-id__t-nav-support\">\n                            <svg class=\"t-gh--icon t-gh--icon-arrow\"\n                                id=\"t-gh--burguer-menu-l2-arrow-id__t-nav-support\">\n                                <use xlink:href=\"#icon-arrow\"><\/use>\n                            <\/svg>\n                        <\/a>\n                        <ul class=\"t-gh--burger-menu-l2\" id=\"t-gh--burguer-menu-l2-id__t-nav-support\">\n                                                            <li class=\"t-gh--burger-menu-l2--item \">\n                                    <a href=\"https:\/\/www.tuenti.gt\/ayuda\/\"  id=\"t-nav-support-help\" >Ayuda<\/a>                                <\/li>\n                                                            <li class=\"t-gh--burger-menu-l2--item \">\n                                    <a href=\"https:\/\/www.tuenti.gt\/preguntas-frecuentes\/\"  id=\"t-nav-support-faq\" >FAQs<\/a>                                <\/li>\n                                                            <li class=\"t-gh--burger-menu-l2--item \">\n                                    <a href=\"https:\/\/www.tuenti.gt\/foro\/\"  id=\"t-nav-support-foro\" >Foro<\/a>                                <\/li>\n                                                    <\/ul>\n                                    <\/li>\n                            <li class=\"t-gh--burger-menu--item \">\n                    <span class=\"t-gh--burger-menu--item--txt\"><a href=\"https:\/\/www.tuenti.gt\/app\/\"  id=\"t-nav-app\" >App<\/a><\/span>\n                                    <\/li>\n                        <li class=\"t-gh--burger-menu--item t-gh--login\">\n                <span class=\"t-gh--burger-menu--item--txt\"><a href=\"https:\/\/www.tuenti.com\/login\" >Entrar<\/a><\/span>\n            <\/li>\n        <\/ul>\n    \n<\/div>\n<script id=\"tuenti-response-json-payload\" type=\"application\/json\">{\"ua\":{\"trackingUrl\":\"https:\\\/\\\/www.tuenti.com\\\/index.globalnav.php?m=GlobalHeader2&func=trackPageView\"}}<\/script>"
+      );
+  </script>
+
+</head>
+
+<body class="cuerpo">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD4QNBJ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <div class="background_top">
+    <div class="top">
+      <div class="left">
+        <p class="p1" style="color: #ff0063;text-align: center;">Aplicá para</p>
+        <p class="p2" style="color: #ff0063;text-align: center;width: auto;">un chance </p>
+        <p class="p2" style="color: #ff0063;text-align: center;width: auto;">¡Sin pajas!</p>
+
+      </div>
+
+      <div class="right">
+        <div data-aos="fade-down" data-aos-duration="1000"><img class="img_top" src="img/stock_cartoons.png"></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="content_items_pc">
+    <div class="row">
+      <div data-aos="zoom-out-down" data-aos-duration="1000">
+        <div class="title_icons" style="font-family: 'Catamaran', sans-serif; font-weight: 700;">
+          ¿Por qué ser parte del equipo Tuenti?
+        </div>
+      </div>
+    </div>
+    <div class="row" style="font-family: 'Catamaran', sans-serif; font-weight: 900;">
+      <div class="col">
+        <div class="img_w">
+          <div data-aos="zoom-in" data-aos-duration="1000"><img class="icon_tuenti" src="img/Asset 24.png"></div>
+        </div>
+        <div>
+          <p class="text_icons" style="font-family: Catamaran-bold;">Somos un equipo joven, <br> atrevido y ¡Sin pajas!
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="img_w">
+          <div data-aos="zoom-in" data-aos-duration="1000"><img class="icon_tuenti" src="img/Asset 27.png"></div>
+        </div>
+        <div>
+          <p class="text_icons" style="font-family: Catamaran-bold;">Estamos cambiando las reglas<br>
+            con las marcas de telefonía.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="img_w">
+          <div data-aos="zoom-in" data-aos-duration="1000"><img class="icon_tuenti" src="img/Asset 22.png"></div>
+        </div>
+        <div>
+          <p class="text_icons" style="font-family: Catamaran-bold;">
+            Gente que trabaja bien,<br>
+            merece ganar bien.<br>
+            Creemos y valoramos eso.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="img_w">
+          <div data-aos="zoom-in" data-aos-duration="1000"><img class="icon_tuenti" src="img/Asset 25.png"></div>
+        </div>
+        <div>
+          <p class="text_icons" style="font-family: Catamaran-bold;">
+            ¡Nuestra gente lo es todo!<br>
+            Somos un equipo y estamos<br>
+            juntos en cualquier circunstancia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contenido_form">
+    <div class="title_form" style="display: inline-block;">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <p class="plaza_title" style="font-family: 'Catamaran', sans-serif; font-weight: 700;">Plazas disponibles</p>
+        <p class="description" style="font-family: 'Catamaran', sans-serif; font-weight: 500;">Nuestro equipo de trabajo
+          siempre está buscando crecer. Por eso te queremos con nosotros.</p>
+      </div>
+      <div class="plazas_icon">
+        <div class="container">
+          <div class="row">
+
+            <div class="col1">
+              <div data-aos="fade-up" data-aos-duration="2000">
+                <div>
+                  <img src="img/Ventas.png">
+                  <br>
+                  <button class="button_icon"
+                    style="font-family: 'Catamaran', sans-serif; font-weight: 700;">Ventas</button>
+                </div>
+                <div class="icons_info">
+                  <p style="font-family: 'Catamaran', sans-serif; font-weight: bolder;">
+                    ¿Casaca mata carita? Está bien, pero sin <br>
+                    pajas. Acá van los que son buenos para<br>
+                    vender. ¿Te apuntás?
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col2">
+              <div data-aos="fade-up" data-aos-duration="2000">
+                <div>
+                  <img src="img/Contact.png">
+                  <br>
+                  <button class="button_icon" style="font-family: 'Catamaran', sans-serif; font-weight: 700;">Contact
+                    Center</button>
+                </div>
+                <div class="icons_info">
+                  <p style="font-family: 'Catamaran', sans-serif; font-weight: bolder;">
+                    A este crew les decimos "Tuentialeros" son <br>
+                    los cracks que responden y solucionan.<br>
+                    ¿Son la voz de la razón? Entonces este es <br>
+                    tu tipo de puesto.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col3">
+              <div data-aos="fade-up" data-aos-duration="2000">
+                <div>
+                  <img src="img/Otro.png">
+                  <br>
+                  <button class="button_icon"
+                    style="font-family: 'Catamaran', sans-serif; font-weight: 700;">Otros</button>
+                </div>
+                <div class="icons_info">
+                  <p style="font-family: 'Catamaran', sans-serif; font-weight: bolder;">
+                    Si tu sueño es ser T-Rex o cualquier otro puesto <br>
+                    descabellado; vas en esta sección.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form "  >
+      <img src="./img/Tuenti-NoPlazas.png" alt="" style="width: 100%; height: 100%;">
+    </div>
+    <div class="form " hidden="true">
+      <h1 style="
+      position: absolute;
+      text-align: center;
+      width: 50%;
+      margin-left: 25%;
+      height: 1000px;
+      vertical-align: middle;
+      padding-top: 20%;
+      font-size: 7rem;
+      z-index: 100; color:#691da4;
+  ">No contamos con plazas disponibles por el momento</h1>
+      <div class="content_form" style="filter: blur(6px);z-index: -100;">
+        <p class="title" style=" font-family: Catamaran-extra;">Formulario de aplicación</p>
+        <script type="text/javascript">
+          var submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {
+          // var result = $('#id_pedido').val();
+          // var result2 = $('#id_afiliado').val();
+          // var result3 = $('#comboFinal').val();
+          //  window.location='http://pedi-tu-chip.com.gt';
+        $('#myModalSuccess').modal('show');
+         // $('#ss-form')[0].reset();
+         $('#file').val(''); $('#labelfile').text('   Examinar   ');}"></iframe>
+
+        <form name="formula" method="GET"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdWiFKhl-Dt6Msa9guMQC5h1ODGC9TKtRWCP1FWNiqdIZxhhw/formResponse"
+          id="ss-form" target="hidden_iframe" onsubmit="return validateForm()" disabled="true">
+
+          <input id="name" placeholder="Nombre Completo" class="single_button" type="text" name="entry.667246801">
+
+          <input id="date_birth" placeholder="Fecha de Nacimiento" class="single_button" type="date"
+            name="entry.1069737128" style="-webkit-appearance: none;
+  -moz-appearance: none;">
+          <div class="content_inputs" >
+            <div class="left_input">
+              <input id="phone" placeholder="Número de Teléfono" class="two_inputs" type="text" name="entry.1816033715">
+            </div>
+            <div class="right_input">
+              <input id="mail" placeholder="Correo electrónico" class="two_inputs" type="email" name="entry.1248341499">
+            </div>
+          </div>
+          
+          <input id="val_correo" class="two_buttons" type="text" name="entry.234613257" style="display: none;">
+          <div class="content_inputs" >
+              <div class="left_input">
+                  <select  name="entry.114009650" id="departamento" style="border: 1px solid grey;">
+                      <option id="null" value="null" selected disabled> Departamentos </option>
+                      <!-- <option id="1" value="Alta Verapaz"> Alta Verapaz </option> -->
+                      <!-- <option id="2" value="Baja Verapaz"> Baja Verapaz </option> -->
+                      <option id="3" value="Chimaltenango"> Chimaltenango </option>
+                      <!-- <option id="4" value="Chiquimula"> Chiquimula </option> -->
+                      <!-- <option id="5" value="El Progreso"> El Progreso </option> -->
+                      <option id="6" value="Escuintla"> Escuintla </option>
+                      <option id="7" value="Guatemala"> Guatemala </option>
+                      <!-- <option id="8" value="Huehuetenango"> Huehuetenango </option> -->
+                      <!-- <option id="9" value="Izabal"> Izabal </option> -->
+                      <!-- <option id="10" value="Jalapa"> Jalapa </option> -->
+                      <!-- <option id="11" value="Jutiapa"> Jutiapa </option> -->
+                      <!-- <option id="12" value="Petén"> Petén </option> -->
+                      <option id="13" value="Quetzaltenango"> Quetzaltenango </option>
+                      <!-- <option id="14" value="Quiché"> Quiché </option> -->
+                      <!-- <option id="15" value="Retalhuleu"> Retalhuleu </option> -->
+                      <option id="16" value="Sacatepéquez"> Sacatepéquez </option>
+                      <!-- <option id="17" value="San Marcos"> San Marcos </option> -->
+                      <!-- <option id="18" value="Santa Rosa"> Santa Rosa </option> -->
+                      <option id="19" value="Sololá"> Sololá </option>
+                      <!-- <option id="20" value="Suchitepéquez"> Suchitepéquez </option> -->
+                      <option id="21" value="Totonicapán"> Totonicapán </option>
+                      <!-- <option id="22" value="Zacapa"> Zacapa </option> -->
+                    </select>
+              </div>
+              <div class="right_input">
+                    <select  name="entry.1731284747" id="municipio" style="border: 1px solid grey;">
+                      <option id="null" value="null" selected> Municipios </option>
+                    </select>
+              </div>
+            </div>
+
+          <input id="zona" placeholder="Zona de residencia" class="single_button" type="text" name="entry.592608491">
+          <div class="content_inputs" id="content_end_form">
+              <div class="left_div">
+                  <div class="grado" >
+                      <label id="last_grade"> Último grado de estudios</label>
+          
+                      <div class="btn-group btn-group-primary" style="width: 73%" id="div_grade">
+                        <select class="btn btn-primary2" id="grade" name="entry.1002170937" style="border: 1px solid grey;">
+                          <option value="Primaria">Primaria</option>
+                          <option value="Basico">Basico</option>
+                          <option value="Diversificado/Bachillerato">Diversificado/Bachillerato</option>
+                          <option value="Universitario">Universidad</option>
+                        </select>
+                        <!-- <button id="buttons_form_grado" data-toggle="dropdown" class="btn btn-primary_arrow dropdown-toggle" type="button"><span class="caret"></span></button> -->
+                      </div>
+                    </div>
+                    <div class="plaza"
+>
+                    <label id="dis_plaza">¿Plaza a la que estás aplicando?</label>
+                  </div>
+                  
+              </div>
+              <div class="right_div">
+                  <div class="disposicion" >
+                      <label id="dis_text">¿Disposición de trabajar 6 días a la semana?</label>
+                      <br>
+                      <div class="btn-group btn-group-primary" style="width: 100%;margin-bottom: 1em" id="div_dis">
+                        <select class="btn btn-primary2" name="entry.990963831" id="dis"
+                          style="width: 30%;border: 1px solid grey;">
+                          <option value="Si">Si</option>
+                          <option value="No">No</option>
+                        </select>
+                        <!-- <button id="buttons_form_disposicion" data-toggle="dropdown" class="btn btn-primary_arrow dropdown-toggle" type="button"><span class="caret"></span></button> -->
+                      </div>
+                    </div>
+                    
+                  <div class="option_p" >
+                    <div class="btn-group btn-group-primary" style="width: 90%;" id="div_job">
+                      <select class="btn btn-primary2" id="job" name="entry.1336047419" style="border: 1px solid grey;">
+                        <option id="null" value="null">Plaza</option>
+                        <option id="0" value="Ventas">Ventas</option>
+                        <!-- <option id="1" value="Contact Center">Contact Center</option> -->
+                        <option id="2" value="Otros">Otros</option>
+                      </select>
+                      <!-- <button id="buttons_form_plaza" data-toggle="dropdown" class="btn btn-primary_arrow dropdown-toggle" type="button"><span class="caret"></span></button> -->
+                    </div>
+                    <br>
+                    <div class="btn-group btn-group-primary" style="width: 90%;margin-top: 1em" id="div_subjob">
+                      <select class="btn btn-primary2" id="subjob" name="entry.1852410224" style="border: 1px solid grey;">
+                        <option value="null">Subplaza</option>
+                      </select>
+                      <!-- <button <button id="buttons_form_subplaza"  data-toggle="dropdown" class="btn btn-primary_arrow dropdown-toggle" type="button"><span class="caret"></span></button> -->
+                    </div>
+                    
+                  </div>
+                 
+              </div>
+              
+            </div>
+            <div class="add_cv" >
+              <div class="cv" >
+                <label class="label_cv">Adjuntar CV </label>
+              </div>
+              <div class="cv_op" >
+                <div style="margin-top:4px;">
+                  <input name="imageupl" type="file" id="file" class="file" />
+                  <label class="labelfile" id="labelfile" style="width: auto;font-family: Catamaran-extra;"><i
+                      class="icon-download-alt"></i> Examinar </label>
+                  <label id="file-name"></label>
+                </div>
+              </div>
+            </div>
+          <input class="button_s" type="submit" id="send_form" value="Enviar" name="submit_form">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error -->
+  <!-- Modal HTML -->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm" id="modals">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="icon-box">
+            <i class="material-icons">&#xE5CD;</i>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Aguas!</h4>
+          <p id="modal_error"></p>
+          <button class="btn btn-success" data-dismiss="modal" style="color:#691CA4;font-weight: 900">Intentar de
+            nuevo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal HTML -->
+  <div id="myModalSuccess" class="modal fade">
+    <div class="modal-dialog modal-confirm" id="modals">
+      <div class="modal-content">
+        <div class="modal-header" style="background: #691CA4">
+          <div class="icon-box">
+            <i class="large material-icons dp48">check</i>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Pilas!</h4>
+          <p id="modal_error">Tu solicitud ha sido enviada.</p>
+          <button class="btn btn-success" data-dismiss="modal" style="color:#691CA4;font-weight: 900">Terminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+  $(function () {
+    $("#labelfile").click(function () {
+      $("#file").trigger('click');
+    });
+  });
+  if ($(window).width() < 780) {
+    $(".plaza").after($( ".option_p" ));
+    $(".disposicion").after($( ".add_cv" ));
+  }else{
+    $("#dis_plaza").after($(".option_p"));
+  }
+  if ($(window).width() > 1000 && $(window).width() < 1100 ) {
+    $(".cv").after($( ".cv_op" ));
+  }
+</script>
+<script type="text/javascript">
+  $(".single-item").slick({
+    dots: true
+  });
+
+  AOS.init();
+  var cnd = true;
+  setInterval(function () {
+    if (cnd) {
+      $(".img_top").css('transform', 'scale(1.02)');
+      $(".left").css('transform', 'scale(1.05)');
+      $(".left").css('transition', 'transform 2000ms');
+      $(".img_top").css('transition', 'transform 2000ms');
+
+
+
+      cnd = false;
+    } else {
+      $(".img_top").css('transform', 'scale(1)');
+      $(".left").css('transform', 'scale(1)');
+      $(".left").css('transition', 'transform 2000ms');
+      $(".img_top").css('transition', 'transform 2000ms');
+      cnd = true;
+    }
+  }, 3000);
+</script>
